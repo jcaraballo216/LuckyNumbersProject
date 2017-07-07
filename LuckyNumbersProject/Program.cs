@@ -12,23 +12,23 @@ namespace LuckyNumbersProject
         //Asking user for info
         {
             Console.WriteLine("Weclome to Jerome's Lottery!");
-            Console.WriteLine("The JackPot amount is currently 120,000.");
+            Console.WriteLine("The JACKPOT amount is currently $120,000.");
             Console.WriteLine("You will be asked to enter two numbers to start.");
-            Console.WriteLine("Please enter your first number.");
+            Console.WriteLine("Please enter the first number, being the lowest of the two.");
             int firstNumber = int.Parse(Console.ReadLine());
-            Console.WriteLine("Please enter your second number.");
+            Console.WriteLine("Please enter your second number, being the highest of the two");
             int secondNum = int.Parse(Console.ReadLine());
             Console.WriteLine("Now you will be asked to input 6 numbers one at a time.");
             //setting the numbers in the array
             int[] luckyNumbers = new int[6];
             for (int i = 0; i <= luckyNumbers.Length - 1; i++)
             {
-                Console.WriteLine("Enter your number.");
+                Console.WriteLine(" Please enter a number.");
                 luckyNumbers[i] = int.Parse(Console.ReadLine());
                 while (luckyNumbers[i] < firstNumber || luckyNumbers[i] > secondNum)
                 {
 
-                    Console.WriteLine("Enter a valid number!");
+                    Console.WriteLine("That number is not valid!");
                     break;
                 }
 
@@ -48,21 +48,21 @@ namespace LuckyNumbersProject
             int jackPot = 120000;
             int lottoNumber = 0;
             //hardcode for jackpot
-            for (int i = 0; i < luckyNumbers.Length; i++) 
+            for (int i = 0; i < luckyNumbers.Length; i++)
             {
                 foreach (int num in luckyNumbers)
-                    if (num == numbers[i]) 
-                {
+                    if (num == numbers[i])
+                    {
                         lottoNumber ++;
-                }
-                
+                    }
+
             }
             Console.WriteLine("You guessed " + lottoNumber + " correctly");
             if (lottoNumber == 6)
             {
                 Console.WriteLine("Congrats you have won the JackPot in the amount of " + jackPot);
             }
-            else if (lottoNumber >=4)
+            else if (lottoNumber >= 4)
             {
                 Console.WriteLine("Congrats you have won $" + jackPot * .75);
             }
@@ -81,10 +81,7 @@ namespace LuckyNumbersProject
                 Console.WriteLine("Thank you for playing! Would you like to play again! yes/no");
                 lottoDec = Console.ReadLine().ToLower();
             }
-            while (lottoDec == "no");
-
-
-            
+            while (lottoDec == "yes");
 
 
 
@@ -96,12 +93,19 @@ namespace LuckyNumbersProject
 
 
 
-            
 
 
 
-            
-           
+
+
+
+
+
+
+
+
+
+
             //  Part 4
 
 
