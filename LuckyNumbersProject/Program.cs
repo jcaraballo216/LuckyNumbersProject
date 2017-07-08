@@ -9,7 +9,7 @@ namespace LuckyNumbersProject
     class Program
     {
         static void Main(string[] args)
-        //Asking user for info
+        //Asking user for info        
         {
             Console.WriteLine("Weclome to Jerome's Lottery!");
             Console.WriteLine("The JACKPOT amount is currently $120,000.");
@@ -53,7 +53,7 @@ namespace LuckyNumbersProject
                 foreach (int num in luckyNumbers)
                     if (num == numbers[i])
                     {
-                        lottoNumber ++;
+                        lottoNumber++;
                     }
 
             }
@@ -74,61 +74,55 @@ namespace LuckyNumbersProject
             {
                 Console.WriteLine("You didn't pick that many numbers but you still win $1.00.");
             }
-            //making a do-while loop for yes/no question
+            //making a do-while loop for yes/no questions
             string lottoDec;
             do
             {
-                Console.WriteLine("Thank you for playing! Would you like to play again! yes/no");
-                lottoDec = Console.ReadLine().ToLower();
+                Console.WriteLine("Thank you for playing! Would you like to play again? yes/no");
+                lottoDec = Console.ReadLine();
             }
-            while (lottoDec == "yes");
+            while (lottoDec.ToLower() == "yes");
+            {
+                Console.WriteLine("Thanks for playing!");
+            }
+            {
+
+            }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            //  Part 4
-
-
-            //   Ask the user if the user would like to play again.
-            // If the user says yes, then the program should run again from the beginning.
-            // If the user says no, then the program should say "Thanks for playing!"(Must be exact statement).
-            //Stretch Tasks:
-
-            //            Make your program ensure none of the generated numbers are repeated.For example, the following is a valid output:
-            //Lucky Number: 12
-            //Lucky Number: 47
-            //Lucky Number: 28
-            //Lucky Number: 3
-            //Lucky Number: 19
-            //Lucky Number: 35
-            //But, the following output is invalid because 12 is generated twice.
-            //Lucky Number: 12
-            //Lucky Number: 47
-            //Lucky Number: 28
-            //Lucky Number: 3
-            //Lucky Number: 19
-            //Lucky Number: 12
-            //If there is a repeated number, replace it with a new number.Do this until there are no repeated numbers.
         }
+
+
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
