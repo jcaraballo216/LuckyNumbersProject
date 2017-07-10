@@ -10,13 +10,14 @@ namespace LuckyNumbersProject
     {
         static void Main(string[] args)
         //Asking user for info        
+
         {
             Console.WriteLine("Weclome to Jerome's Lottery!");
             Console.WriteLine("The JACKPOT amount is currently $120,000.");
             Console.WriteLine("You will be asked to enter two numbers to start.");
             Console.WriteLine("Please enter the first number, being the lowest of the two.");
             int firstNumber = int.Parse(Console.ReadLine());
-            Console.WriteLine("Please enter your second number, being the highest of the two");
+            Console.WriteLine("Please enter your second number, being the highest of the two.");
             int secondNum = int.Parse(Console.ReadLine());
             Console.WriteLine("Now you will be asked to input 6 numbers one at a time.");
             //setting the numbers in the array
@@ -74,19 +75,16 @@ namespace LuckyNumbersProject
             {
                 Console.WriteLine("You didn't pick that many numbers but you still win $1.00.");
             }
-            //making a do-while loop for yes/no questions
+            //making a loop for yes/no questions
             string lottoDec;
-            do
+
             {
                 Console.WriteLine("Thank you for playing! Would you like to play again? yes/no");
                 lottoDec = Console.ReadLine();
-            }
-            while (lottoDec.ToLower() == "yes");
-            {
-                Console.WriteLine("Thanks for playing!");
-            }
-            {
-
+                while (lottoDec.ToLower() == "no")
+                {
+                    Console.WriteLine("Thanks for playing!");
+                }
             }
 
 
