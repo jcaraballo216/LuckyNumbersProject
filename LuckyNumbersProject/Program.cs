@@ -77,13 +77,13 @@ namespace LuckyNumbersProject
             }
             //making a loop for yes/no questions
             string lottoDec;
-
             {
                 Console.WriteLine("Thank you for playing! Would you like to play again? yes/no");
                 lottoDec = Console.ReadLine();
                 while (lottoDec.ToLower() == "no")
                 {
                     Console.WriteLine("Thanks for playing!");
+                    break;
                 }
             }
 
